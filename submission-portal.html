@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICONFST'26 | Submission Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="submission-page">
+  <header class="topbar">
+    <div class="container nav-row">
+      <a class="brand" href="index.html"><img src="images/iconfst-logo.jpg" alt="ICONFST Logo" /><span>ICONFST'26<small>Gateway ICT Polytechnic</small></span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" data-main-nav aria-label="Main navigation">
+        <div class="dropdown"><button class="dropbtn" type="button">Home ▾</button><div class="dropdown-content"><a href="index.html">Home Overview</a><a href="index.html#home-info">Conference Snapshot</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Welcome ▾</button><div class="dropdown-content"><a href="welcome.html">Welcome</a><a href="welcome.html#conference-intro">Conference Intro & Flier</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Publication ▾</button><div class="dropdown-content"><a href="publication.html">Publication</a><a href="downloads/conference-programme.pdf" download>Conference Programme</a><a href="downloads/paper-submission-template.docx" download>Paper Submission Template</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Registration ▾</button><div class="dropdown-content"><a href="registration.html">Registration</a><a href="submission-portal.html">Submission Portal</a><a href="certificate-portal.html">Certificate Portal</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Contact Us ▾</button><div class="dropdown-content"><a href="contact.html">Contact Us</a></div></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-title"><div class="container"><h1>ICONFST'26 Submission Portal</h1></div></section>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel portal-hero-panel">
+        <h2>Upload Abstract or Full Paper</h2>
+        <p>Submit an abstract, a full paper, or both for ICONFST'26. Every submission gets a unique tracking ID.</p>
+      </section>
+
+      <section class="panel">
+        <form id="submission-form" class="submission-form" enctype="multipart/form-data">
+          <label>Author Full Name<input type="text" name="authorName" required /></label>
+          <label>Author Email<input type="email" name="authorEmail" required /></label>
+          <label>Affiliation<input type="text" name="affiliation" /></label>
+          <label>Paper Title<input type="text" name="paperTitle" required /></label>
+          <label>Abstract File (optional)<input type="file" name="abstractFile" accept=".pdf,.doc,.docx" /></label>
+          <label>Full Paper File (optional)<input type="file" name="fullPaperFile" accept=".pdf,.doc,.docx" /></label>
+          <p class="submission-status">Upload at least one file: Abstract, Full Paper, or both.</p>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <p id="submission-status" class="submission-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Quick Links</h2>
+        <div class="quick-links">
+          <a class="btn btn-primary" href="registration.html">Registration</a>
+          <a class="btn btn-ghost quick-link-secondary" href="certificate-portal.html">Certificate Portal</a>
+          <a class="btn btn-ghost quick-link-secondary" href="authors-dashboard.html">Author Dashboard</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">© 2026 ICONFST'26 Organising Committee.</div></footer>
+</body>
+</html>

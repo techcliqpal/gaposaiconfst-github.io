@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICONFST'26 | Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="registration-page">
+  <header class="topbar">
+    <div class="container nav-row">
+      <a class="brand" href="index.html"><img src="images/iconfst-logo.jpg" alt="ICONFST Logo" /><span>ICONFST'26<small>Gateway ICT Polytechnic</small></span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" data-main-nav aria-label="Main navigation">
+        <div class="dropdown"><button class="dropbtn" type="button">Home ▾</button><div class="dropdown-content"><a href="index.html">Home Overview</a><a href="index.html#home-info">Conference Snapshot</a><a href="index.html#countdown">Countdown Timer</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Welcome ▾</button><div class="dropdown-content"><a href="welcome.html">Welcome</a><a href="welcome.html#conference-intro">Conference Intro & Flier</a><a href="welcome.html#rector-message">Rector Message</a><a href="welcome.html#speaker-links">Speaker & Contributor Links</a><a href="conference-leadership.html">Conference Leadership</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Publication ▾</button><div class="dropdown-content"><a href="publication.html">Publication</a><a href="downloads/conference-programme.pdf" download>Conference Programme (PDF)</a><a href="downloads/paper-submission-template.docx" download>Paper Submission Template (.docx)</a><a href="downloads/author-guidelines.docx" download>Author Guidelines (.docx)</a><a href="downloads/book-of-abstract.docx" download>Book of Abstract Template (.docx)</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Registration ▾</button><div class="dropdown-content"><a href="registration.html">Registration</a><a href="submission-portal.html">Submission Portal</a><a href="#payment-info">Payment Information</a><a href="certificate-portal.html">Certificate Portal</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Contact Us ▾</button><div class="dropdown-content"><a href="contact.html">Contact Us</a><a href="mailto:iconfst@gaposa.edu.ng">iconfst@gaposa.edu.ng</a><a href="mailto:gaposastconf@gmail.com">gaposastconf@gmail.com</a><a href="tel:+2348062618986">+23480-6261-8986</a></div></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-title"><div class="container"><h1>ICONFST'26 Registration Portal</h1></div></section>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel registration-flier-hero">
+        <div class="registration-flier-hero-content">
+          <p class="registration-tag">INTERNATIONAL CONFERENCE ON SCIENCE AND TECHNOLOGY</p>
+          <h2>ICONFST'26 Registration & Submission Portal</h2>
+          <p><strong>Organised by:</strong> School of Science and Technology, Gateway (ICT) Polytechnic, Saapade, Ogun State, Nigeria.</p>
+          <p><strong>Theme:</strong> Sustainable Research from Gown to Town: Bridging the Academia and Industry Divide.</p>
+          <p class="registration-meta">Conference Dates: Sunday, 23rd August, 2026 to Thursday, 26th August, 2026 · Mode: Virtual & Physical</p>
+        </div>
+      </section>
+
+      <div class="registration-flier-layout">
+        <section id="register-form" class="panel register-form-panel">
+          <h2>Submit Abstract / Full Paper</h2>
+          <p>Each abstract is assigned a unique tracking ID in this format: <strong>ICONFST26-YYYY-####</strong>.</p>
+          <form id="submission-form" class="submission-form" enctype="multipart/form-data">
+            <label>
+              Author Full Name
+              <input type="text" name="authorName" required />
+            </label>
+            <label>
+              Author Email
+              <input type="email" name="authorEmail" required />
+            </label>
+            <label>
+              Affiliation
+              <input type="text" name="affiliation" />
+            </label>
+            <label>
+              Paper Title
+              <input type="text" name="paperTitle" required />
+            </label>
+            <label>
+              Abstract File (required)
+              <input type="file" name="abstractFile" accept=".pdf,.doc,.docx" required />
+            </label>
+            <label>
+              Full Paper File (optional)
+              <input type="file" name="fullPaperFile" accept=".pdf,.doc,.docx" />
+            </label>
+            <button type="submit" class="btn btn-primary">Submit Registration</button>
+            <p id="submission-status" class="submission-status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <aside class="registration-side-stack">
+          <section id="payment-info" class="panel payment-panel">
+            <h2>Conference Fees</h2>
+            <ul>
+              <li>Students (Local): ₦5,000</li>
+              <li>Scholars (Local): ₦20,000 (Early), ₦25,000 - ₦30,000 (Mid/Late)</li>
+              <li>International / Virtual: $20</li>
+              <li>International / Physical: $100</li>
+            </ul>
+          </section>
+
+          <section class="panel deadlines-panel">
+            <h2>Important Dates</h2>
+            <ul>
+              <li>Abstract Deadline: 13th August, 2026</li>
+              <li>Acceptance Notification: 22nd August, 2026</li>
+              <li>Full Paper Submission: 21st August, 2026</li>
+            </ul>
+          </section>
+
+          <section class="panel docs-panel">
+            <h2>Submission Files</h2>
+            <details class="resource-dropdown">
+              <summary>Open downloadable conference documents</summary>
+              <ul>
+                <li><a href="downloads/conference-programme.pdf" download>Conference Programme</a></li>
+                <li><a href="downloads/author-guidelines.docx" download>Author Guidelines</a></li>
+                <li><a href="downloads/paper-submission-template.docx" download>Paper Submission Template</a></li>
+                <li><a href="downloads/book-of-abstract.docx" download>Book of Abstract Template</a></li>
+              </ul>
+            </details>
+          </section>
+
+          <section class="panel quick-links-panel">
+            <h2>Quick Links</h2>
+            <div class="quick-links">
+              <a class="btn btn-primary" href="index.html">Home Page</a>
+              <a class="btn btn-ghost quick-link-secondary" href="contact.html">Contact Us Page</a>
+              <a class="btn btn-ghost quick-link-secondary" href="authors-dashboard.html">Author Dashboard / Certificate</a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">© 2026 ICONFST'26 Organising Committee.</div></footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICONFST'26 | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="home-page">
+  <header class="topbar">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">
+        <img src="images/iconfst-logo.jpg" alt="ICONFST Logo" />
+        <span>ICONFST'26<small>Gateway ICT Polytechnic</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" data-main-nav aria-label="Main navigation">
+        <div class="dropdown"><button class="dropbtn" type="button">Home ▾</button><div class="dropdown-content"><a href="index.html">Home Overview</a><a href="#home-info">Conference Snapshot</a><a href="#countdown">Countdown Timer</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Welcome ▾</button><div class="dropdown-content"><a href="welcome.html">Welcome</a><a href="welcome.html#conference-intro">Conference Intro & Flier</a><a href="welcome.html#rector-message">Rector Message</a><a href="welcome.html#speaker-links">Speaker & Contributor Links</a><a href="conference-leadership.html">Conference Leadership</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Publication ▾</button><div class="dropdown-content"><a href="publication.html">Publication</a><a href="downloads/conference-programme.pdf" download>Conference Programme (PDF)</a><a href="downloads/paper-submission-template.docx" download>Paper Submission Template (.docx)</a><a href="downloads/author-guidelines.docx" download>Author Guidelines (.docx)</a><a href="downloads/book-of-abstract.docx" download>Book of Abstract Template (.docx)</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Registration ▾</button><div class="dropdown-content"><a href="registration.html">Registration</a><a href="submission-portal.html">Submission Portal</a><a href="certificate-portal.html">Certificate Portal</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Contact Us ▾</button><div class="dropdown-content"><a href="contact.html">Contact Us</a><a href="mailto:iconfst@gaposa.edu.ng">iconfst@gaposa.edu.ng</a><a href="mailto:gaposastconf@gmail.com">gaposastconf@gmail.com</a><a href="tel:+2348062618986">+23480-6261-8986</a></div></div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">23rd August, 2026 - 26th August, 2026 · SAAPADE, OGUN STATE, NIGERIA</span>
+        <h1>ICONFST'26 - International Conference on Science and Technology</h1>
+        <p class="theme"><strong>Theme:</strong> Sustainable Research from Gown to Town: Bridging the Academia and Industry Divide.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="registration.html">Open Registration</a>
+          <a class="btn btn-ghost" href="publication.html">Open Publication</a>
+          <a class="btn btn-ghost" href="contact.html">Open Contact Us</a>
+        </div>
+        <div id="countdown" class="countdown" data-countdown-target="2026-08-23T09:00:00+01:00" aria-label="Conference countdown timer">
+          <div class="unit"><strong data-days>--</strong><span>Days</span></div>
+          <div class="unit"><strong data-hours>--</strong><span>Hours</span></div>
+          <div class="unit"><strong data-minutes>--</strong><span>Minutes</span></div>
+          <div class="unit"><strong data-seconds>--</strong><span>Seconds</span></div>
+        </div>
+      </div>
+    </section>
+    <section id="home-info" class="section">
+      <div class="container">
+        <div class="card-grid">
+          <article class="card"><h3>Publication</h3><p>Target publication outlet: <strong>Scopus index journals</strong>.</p></article>
+          <article class="card"><h3>Participation</h3><p>International: <strong>Virtual ($10), Physical ($100)</strong>.</p></article>
+          <article class="card"><h3>Key Deadlines</h3><p>Abstract: 13th August, 2026 · Acceptance: 22nd August, 2026 · Full Paper: 21st August, 2026.</p></article>
+          <article class="card"><h3>Quick Access</h3><p>Use the dropdown menus above to open pages and files quickly.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section supporters-section" id="supporters">
+      <div class="container">
+        <h2>Proudly Supported by:</h2>
+        <div class="supporters-grid">
+          <article class="supporter-card">
+            <img src="images/iconfst-logo.jpg" alt="Gateway (ICT) Polytechnic, Saapade logo" />
+            <h3>Gateway (ICT) Polytechnic, Saapade</h3>
+          </article>
+          <article class="supporter-card">
+            <img src="images/supporters/iprftz-logo.jpg" alt="Industrial Platform Remo free trade zone logo" />
+            <h3>Industrial Platform Remo free trade zone</h3>
+          </article>
+          <article class="supporter-card">
+            <img src="images/supporters/justrite-logo.png" alt="Justrite logo" />
+            <h3>Justrite</h3>
+          </article>
+          <article class="supporter-card">
+            <img src="images/supporters/otp-kitchen-logo.jpg" alt="OTP kitchen logo" />
+            <h3>OTP Kitchen</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container">© 2026 ICONFST'26 Organising Committee · Gateway ICT Polytechnic, SAAPADE, OGUN STATE, NIGERIA.</div></footer>
+</body>
+</html>

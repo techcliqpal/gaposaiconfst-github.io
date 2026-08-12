@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICONFST'26 | Authors Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-row">
+      <a class="brand" href="index.html"><img src="images/iconfst-logo.jpg" alt="ICONFST Logo" /><span>ICONFST'26<small>Gateway ICT Polytechnic</small></span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" data-main-nav aria-label="Main navigation">
+        <div class="dropdown"><button class="dropbtn" type="button">Home ▾</button><div class="dropdown-content"><a href="index.html">Home Overview</a><a href="index.html#home-info">Conference Snapshot</a><a href="index.html#countdown">Countdown Timer</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Publication ▾</button><div class="dropdown-content"><a href="publication.html">Publication</a><a href="downloads/conference-programme.pdf" download>Conference Programme (PDF)</a><a href="downloads/paper-submission-template.docx" download>Paper Submission Template (.docx)</a><a href="downloads/author-guidelines.docx" download>Author Guidelines (.docx)</a><a href="downloads/book-of-abstract.docx" download>Book of Abstract Template (.docx)</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Registration ▾</button><div class="dropdown-content"><a href="registration.html">Registration</a><a href="registration.html#register-form">Register & Submit</a><a href="registration.html#payment-info">Payment Information</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Contact Us ▾</button><div class="dropdown-content"><a href="contact.html">Contact Us</a></div></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-title"><div class="container"><h1>Registered Authors Dashboard</h1></div></section>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel dashboard-nav-panel">
+        <div class="quick-links">
+          <a class="btn btn-primary" href="registration.html">New Registration</a>
+          <a class="btn btn-ghost quick-link-secondary" href="certificate-portal.html">Certificate Portal</a>
+          <a class="btn btn-ghost quick-link-secondary" href="contact.html">Contact Us</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Author Access</h2>
+        <p>This dashboard is for registered users. Use the links below to submit files, check certificate status, or contact the conference team.</p>
+        <div class="quick-links">
+          <a class="btn btn-primary" href="submission-portal.html">Submit Abstract / Full Paper</a>
+          <a class="btn btn-ghost quick-link-secondary" href="certificate-portal.html">Check Certificate Status</a>
+          <a class="btn btn-ghost quick-link-secondary" href="secure-admin-login-ic26.html">Admin Login</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">© 2026 ICONFST'26 Organising Committee.</div></footer>
+</body>
+</html>

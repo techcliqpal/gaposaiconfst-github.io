@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICONFST'26 | Secure Admin Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="certificate-page">
+  <main class="section">
+    <div class="container">
+      <section class="panel certificate-form-panel">
+        <h1>Secure Admin Access</h1>
+        <p>Restricted portal for conference administrators only.</p>
+        <form id="admin-login-form" class="submission-form" autocomplete="off">
+          <label>Username<input type="text" name="username" required /></label>
+          <label>Password<input type="password" name="password" required /></label>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+          <p id="admin-login-status" class="submission-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <script>
+    (() => {
+      const form = document.getElementById('admin-login-form');
+      const status = document.getElementById('admin-login-status');
+      const ADMIN_TOKEN_KEY = 'iconfst_admin_token';
+      const USERNAME = 'Admin';
+      const PASSWORD = "IConfst'26!";
+
+      if (!form || !status) return;
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const payload = Object.fromEntries(new FormData(form).entries());
+        const username = String(payload.username || '').trim();
+        const password = String(payload.password || '');
+
+        if (username !== USERNAME || password !== PASSWORD) {
+          status.textContent = 'Login failed: Invalid username or password.';
+          return;
+        }
+
+        localStorage.setItem(ADMIN_TOKEN_KEY, 'iconfst-local-admin-token');
+        status.textContent = 'Login successful. Redirecting...';
+        window.setTimeout(() => {
+          window.location.href = 'admin-dashboard.html';
+        }, 500);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICONFST'26 | Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-row">
+      <a class="brand" href="index.html"><img src="images/iconfst-logo.jpg" alt="ICONFST Logo" /><span>ICONFST'26<small>Gateway ICT Polytechnic</small></span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" data-main-nav aria-label="Main navigation">
+        <div class="dropdown"><button class="dropbtn" type="button">Home ▾</button><div class="dropdown-content"><a href="index.html">Home Overview</a><a href="index.html#home-info">Conference Snapshot</a><a href="index.html#countdown">Countdown Timer</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Publication ▾</button><div class="dropdown-content"><a href="publication.html">Publication</a><a href="downloads/conference-programme.pdf" download>Conference Programme (PDF)</a><a href="downloads/paper-submission-template.docx" download>Paper Submission Template (.docx)</a><a href="downloads/author-guidelines.docx" download>Author Guidelines (.docx)</a><a href="downloads/book-of-abstract.docx" download>Book of Abstract Template (.docx)</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Registration ▾</button><div class="dropdown-content"><a href="registration.html">Registration</a><a href="submission-portal.html">Submission Portal</a><a href="certificate-portal.html">Certificate Portal</a></div></div>
+        <div class="dropdown"><button class="dropbtn" type="button">Contact Us ▾</button><div class="dropdown-content"><a href="contact.html">Contact Us</a></div></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-title"><div class="container"><h1>Admin Dashboard</h1></div></section>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel dashboard-nav-panel">
+        <div class="quick-links">
+          <a class="btn btn-primary" href="secure-admin-login-ic26.html">Admin Login</a>
+          <a class="btn btn-ghost quick-link-secondary" href="submission-portal.html">Submission Portal</a>
+          <a class="btn btn-ghost quick-link-secondary" href="authors-dashboard.html">Authors Dashboard</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Admin Controls</h2>
+        <div class="admin-controls">
+          <label>Admin Access Key<input id="admin-token-input" type="password" placeholder="Paste admin token from secure admin login page" /></label>
+          <form id="admin-user-form" class="submission-form" autocomplete="off">
+            <input type="hidden" id="admin-user-abstract-id" name="abstractId" />
+            <label>Author Full Name<input type="text" id="admin-user-name" name="authorName" placeholder="Enter author full name" required /></label>
+            <label>Author Email<input type="email" id="admin-user-email" name="authorEmail" placeholder="author@example.com" required /></label>
+            <label>Affiliation<input type="text" id="admin-user-affiliation" name="affiliation" placeholder="Institution / Department" /></label>
+            <label>Paper Title<input type="text" id="admin-user-paper-title" name="paperTitle" placeholder="Paper title" required /></label>
+            <div class="quick-links">
+              <button id="admin-user-save" class="btn btn-primary" type="submit">Register User</button>
+              <button id="admin-user-reset" class="btn btn-ghost quick-link-secondary" type="button">Clear Form</button>
+            </div>
+          </form>
+          <div class="quick-links">
+            <button id="email-all-certificates" class="btn btn-primary" type="button">Email Certificates to All Verified Users</button>
+          </div>
+          <p id="admin-action-status" class="submission-status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Submission Records</h2>
+        <p>Track submission type, unique submission ID, author details, uploaded files, and user records.</p>
+        <button id="refresh-submissions" class="btn btn-primary" type="button">Refresh Dashboard</button>
+        <div id="dashboard-summary" class="dashboard-summary"></div>
+        <div class="dashboard-table-wrap">
+          <table class="dashboard-table" id="dashboard-table">
+            <thead>
+              <tr>
+                <th>Submission ID</th>
+                <th>Submission Type</th>
+                <th>Author</th>
+                <th>Paper Title</th>
+                <th>Files</th>
+                <th>Status</th>
+                <th>Payment</th>
+                <th>Certificate</th>
+                <th>Submitted</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">© 2026 ICONFST'26 Organising Committee.</div></footer>
+</body>
+</html>
